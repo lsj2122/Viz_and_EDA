@@ -1,6 +1,0 @@
----
-title: "Viz part 1"
-output: github_document
----
-  
-  
