@@ -121,20 +121,6 @@ ggplot(weather_df, aes(x = tmax, y = name)) +
 ```
 
 
-saving
-
-```{r}
-ggp_weather = 
-  weather_df |> 
-  ggplot(aes(x = tmin, y = tmax)) + 
-  geom_point()
-    
-ggp_weather
-
-ggsave("results/ggp_weather.pdf", ggp_weather)
-
-```
-
 
 
 
