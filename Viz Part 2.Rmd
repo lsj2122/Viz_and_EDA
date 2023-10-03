@@ -29,6 +29,8 @@ weather_df =
   select(name, id, everything())
 ```
 
+This results in a dataframe with `r nrow(weather_df)` with observations on six variables. 
+
 
 ## Same plot from last time
 
