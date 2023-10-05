@@ -244,3 +244,19 @@ weather_df |>
 | 2022-10-01 |          17.43 |      29.22 |        11.88 |
 | 2022-11-01 |          14.02 |      27.96 |         2.14 |
 | 2022-12-01 |           6.76 |      27.35 |        -0.46 |
+
+## Grouped mutate
+
+``` r
+weather_df |> 
+  group_by(name) |> 
+  mutate(
+    mean_tmax = mean(tmax, na.rm = TRUE),
+    centered_tmax = tmax - mean_tmax) |> 
+  ggplot(aes(x = date, y = centered_tmax, color = name)) +
+  geom_point()
+```
+
+    ## Warning: Removed 17 rows containing missing values (`geom_point()`).
+
+![](EDA_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
